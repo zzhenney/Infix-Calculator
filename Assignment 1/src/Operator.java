@@ -1,3 +1,5 @@
+import java.util.*;
+
 public abstract class Operator {
   // The Operator class should contain an instance of a HashMap
   // This map will use keys as the tokens we're interested in,
@@ -9,11 +11,14 @@ public abstract class Operator {
   // HashMap operators = new HashMap();
   // operators.put( "+", new AdditionOperator() );
   // operators.put( "-", new SubtractionOperator() );
-
+    
+  static public HashMap<String, Operator> operators = new HashMap<String, Operator>();
+  
+  
   public abstract int priority();
   public abstract Operand execute( Operand op1, Operand op2 );
 
   public static boolean check( String token ) {
-      return false;
+      return operators.containsKey(token);
   }
 }

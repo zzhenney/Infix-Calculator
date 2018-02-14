@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 public class EvaluatorUI extends JFrame implements ActionListener {
   private TextField txField = new TextField();
   private Panel buttonPanel = new Panel();
+  private String exp = " ";
 
   // total of 20 buttons on the calculator,
   // numbered from left to right, top to bottom
@@ -53,5 +54,33 @@ public class EvaluatorUI extends JFrame implements ActionListener {
 
   public void actionPerformed( ActionEvent arg0 ) {
     // You need to fill in this fuction
+    Evaluator eval = new Evaluator();
+    
+    for(int i=0; i<20; i++){
+        if(arg0.getSource() == buttons[i]){
+            if(buttons[i].getLabel()=="CE"){
+                exp = " ";
+                txField.setText("");
+                System.out.println(exp);
+            }
+            else if(buttons[i].getLabel()=="C"){
+                exp = exp.substring(0, exp.length()-1);
+                txField.setText(exp);
+                System.out.println(exp);
+            }
+            else if(buttons[i].getLabel()=="="){
+                String output;
+                output = Integer.toString(eval.eval(exp));
+                System.out.println(exp);
+                txField.setText(output);
+            }
+            else{
+                exp = exp + buttons[i].getLabel();
+                System.out.println(exp);
+                txField.setText(exp);
+            }
+        }
+    }
+    
   }
 }
