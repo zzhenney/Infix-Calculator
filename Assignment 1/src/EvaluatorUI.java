@@ -63,13 +63,15 @@ public class EvaluatorUI extends JFrame implements ActionListener {
                 exp = " ";
                 txField.setText("");                
             }
+            //bug - on answer it will erase last digit. i.e. 64 becomes 6
             else if(buttons[i].getLabel()=="CE"){
                 exp = exp.substring(0, exp.length()-1);
                 txField.setText(exp);                
             }
             else if(buttons[i].getLabel()=="="){
                 String output;
-                output = Integer.toString(eval.eval(exp));               
+                output = Integer.toString(eval.eval(exp)); 
+                exp = output;
                 txField.setText(output);
             }
             else{
