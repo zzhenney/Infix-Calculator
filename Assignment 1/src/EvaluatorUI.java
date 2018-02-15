@@ -76,7 +76,7 @@ public class EvaluatorUI extends JFrame implements ActionListener {
             }
             else{
                 exp = exp + buttons[i].getLabel();
-                System.out.println(exp);
+                //System.out.println(exp);
                 txField.setText(exp);
             }
         }
