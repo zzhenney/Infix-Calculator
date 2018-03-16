@@ -1,6 +1,6 @@
 # Infix Calculator
 
-# Build Instructions
+## Build Instructions
 
 By using the provided build files, this project can easily be compiled and executed from the command line.
 
