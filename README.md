@@ -12,19 +12,19 @@ Enter the following commands
 ```
 $ cd Assignment\ 1
 ```
-//Run build file
+Run build file
 ```
 $ ant
 ```	
-//Navigate to build directory
+Navigate to build directory
 ```
 $ cd build
 ```
-//Navigate to classes directory
+Navigate to classes directory
 ```
 $ cd classes
 ```
-//Run GUI
+Run GUI
 ```
 $ java EvaluatorUI
 ```
