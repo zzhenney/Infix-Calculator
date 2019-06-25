@@ -1,6 +1,6 @@
 # Infix Calculator
 
-An GUI infix calculator built primarily using a hashmap, stacks, and operator subclasses. 
+An GUI calculator built primarily using a hashmap, stacks, and operator subclasses. 
 ### Build Instructions
 
 By using the provided build files, this project can easily be compiled and executed from the command line.
